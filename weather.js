@@ -1,7 +1,6 @@
 function weathr(){
 
     var city=document.getElementById('city').value; link="https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid=e8cde246c8e175455f7354975fd34a4a";
-    alert(city);
    $.getJSON(link, function(data) {
   
      document.getElementById('temp').innerHTML= '<br><p>City : ' + city + ' <p>Temperature : '+ Math.floor(data.main.temp) + '&#8451;</p><p>Humidity : '+data.main.humidity+'%</p>';
